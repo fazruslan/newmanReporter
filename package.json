@@ -10,5 +10,7 @@
     "npm": "^6.14.8"
   },
   
-  "scripts": {}
+  "scripts": {
+    "test": "newman run swapi/swapiDev.postman_collection.json -e swapi/swapi.postman_environment.json --insecure"
+  }
 }
