@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "52466ed4-4712-4bef-8316-69c8a79d8b0d",
+		"name": "swapiDev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get peoples",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "99bb7a90-9fa4-4cf4-850f-5dcb7106f5f2",
+						"exec": [
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/people",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get people by number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2ad0fdb7-abc5-43a5-8294-8e63e5f99c9b",
+						"exec": [
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"it is Luke Skywalker\", function() {\r",
+							"    pm.expect(responseData.name).to.equal(\"Luke Skywalker\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/people/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
