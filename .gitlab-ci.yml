@@ -6,8 +6,7 @@ postman_job:
   before_script:
   - npm install npm@latest
   - npm install newman
-  - npm 
+  - npm cache clean
   
   script:
   - npm run test
-  - npm cache clean
