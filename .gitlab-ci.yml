@@ -1,1 +1,11 @@
-
+stages:
+  - postman
+  
+postman_job:
+  stage: postman
+  before_script:
+  
+  - npm install newman
+  
+  script:
+  - npm run test
