@@ -4,7 +4,10 @@ stages:
 postman_job:
   stage: postman
   before_script:
+  - npm install npm@latest
   - npm install newman
+  - npm 
   
   script:
   - npm run test
+  - npm cache clean
