@@ -11,6 +11,6 @@
   },
   
   "scripts": {
-    "test": "newman run swapi/swapiDev.postman_collection.json -e swapi/swapi.postman_environment.json --insecure"
+    "test": "newman run swapi/swapiDev.postman_collection.json -e swapi/swapi.postman_environment.json --insecure -r htmlextra"
   }
 }
